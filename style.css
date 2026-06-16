@@ -834,6 +834,66 @@
     margin-bottom: 0;
 }
 
+/* =====================================
+   DARK ACCORDION
+===================================== */
+
+.accordion{
+    --bs-accordion-bg:#111;
+    --bs-accordion-border-color:rgba(255,255,255,0.08);
+    --bs-accordion-btn-bg:#111;
+    --bs-accordion-active-bg:#181818;
+    --bs-accordion-btn-color:#fff;
+    --bs-accordion-active-color:#fff;
+    --bs-accordion-color:#fff;
+}
+
+.accordion-item{
+    background:#111 !important;
+    border:1px solid rgba(255,255,255,0.08) !important;
+    margin-bottom:15px;
+    border-radius:18px !important;
+    overflow:hidden;
+}
+
+.accordion-button{
+    background:#111 !important;
+    color:#fff !important;
+    box-shadow:none !important;
+    font-weight:600;
+}
+
+.accordion-button:not(.collapsed){
+    background:#181818 !important;
+    color:#fff !important;
+}
+
+.accordion-button:focus{
+    box-shadow:none !important;
+}
+
+.accordion-button::after{
+    filter:brightness(0) invert(1);
+}
+
+.accordion-collapse{
+    background:#111 !important;
+}
+
+.accordion-body{
+    background:#111 !important;
+    color:#fff !important;
+}
+
+.accordion-body ul{
+    margin-bottom:0;
+}
+
+.accordion-body li{
+    color:#a1a1aa;
+    margin-bottom:10px;
+}
+
 /* Large Tablet */
 
 @media (max-width: 1200px) {

@@ -1,0 +1,357 @@
+
+:root{
+    --bg:#050505;
+    --card:rgba(255,255,255,0.04);
+    --border:rgba(255,255,255,0.08);
+    --text:#ffffff;
+    --muted:#a1a1aa;
+    --primary:#8b5cf6;
+    --secondary:#5b8cff;
+    --gradient:linear-gradient(135deg,#8b5cf6,#5b8cff);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+section{
+    padding:100px 0;
+}
+
+.gradient-text{
+    background:var(--gradient);
+    background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.glass{
+    background:var(--card);
+    backdrop-filter:blur(18px);
+    border:1px solid var(--border);
+}
+
+.navbar{
+    padding:18px 0;
+    background:rgba(5,5,5,0.8);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.navbar-brand{
+    color:#fff !important;
+    font-weight:800;
+}
+
+.nav-link{
+    color:rgba(255,255,255,0.8) !important;
+}
+
+.nav-link:hover{
+    color:#fff !important;
+}
+
+.btn-primary-custom{
+    background:var(--gradient);
+    color:#fff;
+    padding:14px 28px;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+    border:none;
+}
+
+.btn-primary-custom:hover{
+    color:#fff;
+}
+
+.hero{
+    padding-top:180px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:clamp(3rem,6vw,5rem);
+    font-weight:900;
+    margin-bottom:25px;
+}
+
+.hero p{
+    color:var(--muted);
+    max-width:800px;
+    margin:auto;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.section-title{
+    font-size:clamp(2rem,4vw,3.5rem);
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    color:var(--muted);
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.courses-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.course-card{
+    padding:35px;
+    border-radius:30px;
+    transition:.4s;
+    text-align:center;
+    height:100%;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(139,92,246,.5);
+}
+
+.course-icon{
+    width:90px;
+    height:90px;
+    margin:auto;
+    margin-bottom:25px;
+    border-radius:24px;
+    background:rgba(139,92,246,.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#bba5ff;
+    font-size:2rem;
+}
+
+.course-card h3{
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.course-card p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+.course-meta{
+    margin:25px 0;
+    color:#d1d5db;
+    font-size:.95rem;
+}
+
+.course-price{
+    font-size:2rem;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.footer{
+    padding:70px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer p{
+    color:var(--muted);
+    margin:0;
+}
+
+
+/* =====================================
+   COURSE DETAIL PAGES
+===================================== */
+
+.course-hero{
+    padding-top:180px;
+    padding-bottom:100px;
+}
+
+.course-badge{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:999px;
+    background:rgba(139,92,246,.15);
+    color:#c4b5fd;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.info-card{
+    position:relative;
+    padding:35px 25px;
+    border-radius:28px;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    text-align:center;
+    overflow:hidden;
+    transition:all .35s ease;
+    height:100%;
+}
+
+.info-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(139,92,246,.15),
+        transparent 60%
+    );
+    opacity:0;
+    transition:.35s;
+}
+
+.info-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(139,92,246,.35);
+    box-shadow:
+    0 20px 40px rgba(139,92,246,.15);
+}
+
+.info-card:hover::before{
+    opacity:1;
+}
+
+.info-card i{
+    display:block;
+    font-size:2rem;
+    color:#8b5cf6;
+    margin-bottom:15px;
+}
+
+.info-card h3{
+    font-size:2rem;
+    font-weight:800;
+    margin-bottom:8px;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #5b8cff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.info-card p{
+    color:#a1a1aa;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:.85rem;
+    font-weight:600;
+    margin:0;
+}
+.module-box{
+    border-radius:24px;
+    overflow:hidden;
+}
+
+.pricing-card{
+    padding:35px;
+    border-radius:30px;
+    height:100%;
+}
+
+.price{
+    font-size:3rem;
+    font-weight:900;
+    margin:20px 0;
+}
+
+.featured{
+    border:1px solid rgba(139,92,246,.5);
+}
+
+.course-list{
+    padding-left:20px;
+}
+
+.course-list li{
+    margin-bottom:10px;
+    color:var(--muted);
+}
+
+/* Accordion Dark Theme */
+
+.accordion{
+    --bs-accordion-bg:#111;
+    --bs-accordion-border-color:rgba(255,255,255,.08);
+    --bs-accordion-btn-bg:#111;
+    --bs-accordion-active-bg:#181818;
+    --bs-accordion-btn-color:#fff;
+    --bs-accordion-active-color:#fff;
+    --bs-accordion-color:#fff;
+}
+
+.accordion-item{
+    background:#111 !important;
+    border:1px solid rgba(255,255,255,.08) !important;
+    margin-bottom:15px;
+    border-radius:18px !important;
+    overflow:hidden;
+}
+
+.accordion-button{
+    background:#111 !important;
+    color:#fff !important;
+    font-weight:600;
+    box-shadow:none !important;
+}
+
+.accordion-button:not(.collapsed){
+    background:#181818 !important;
+    color:#fff !important;
+}
+
+.accordion-button::after{
+    filter:brightness(0) invert(1);
+}
+
+.accordion-body{
+    background:#111 !important;
+    color:#fff !important;
+}
+
+
+@media(max-width:992px){
+    .courses-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+    .courses-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:140px;
+    }
+}
+
